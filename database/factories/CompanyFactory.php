@@ -23,6 +23,9 @@ class CompanyFactory extends Factory
     {
         return [
             'name' => $this->faker->name,
+            'nit' => $this->faker->randomNumber(),
+            'phone' => $this->faker->phoneNumber,
+            'email'=> $this->faker->email,
         ];
     }
 }
