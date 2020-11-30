@@ -17,6 +17,7 @@ class CreateTasksTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('user_history');
+            $table->enum('state',['TO DO','IN PROGRESS','UNDER REVIEW','DONE']);
             $table->foreignId('sprint_id')->references('id')->on('sprints');
             $table->timestamps();
         });
