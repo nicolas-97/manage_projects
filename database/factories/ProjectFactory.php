@@ -24,7 +24,8 @@ class ProjectFactory extends Factory
         return [
             'name' => $this->faker->name,
             'start' => $this->faker->date(),
-            'finish' => $this->faker->date()
+            'finish' => $this->faker->date(),
+            'company_id' => 1,
         ];
     }
 }

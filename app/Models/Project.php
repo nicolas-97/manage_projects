@@ -12,8 +12,20 @@ class Project extends Model
     protected $fillable = [
         'name',
         'start',
+        'finish',
+        'company_id'
+    ];
+
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = [
+        'start',
         'finish'
     ];
+
 
     public function company(){
         return $this->belongsTo('App\Models\Company');

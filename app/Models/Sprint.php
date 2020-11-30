@@ -15,6 +15,16 @@ class Sprint extends Model
         'backlog_id',
     ];
 
+    /**
+     * The attributes that should be mutated to dates.
+     *
+     * @var array
+     */
+    protected $dates = [
+        'start',
+        'finish'
+    ];
+
     public function backlog(){
         return $this->belongsTo('App\Models\Backlog');
     }
