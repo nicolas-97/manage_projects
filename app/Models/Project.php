@@ -32,6 +32,6 @@ class Project extends Model
     }
 
     public function backlog(){
-        return $this->belongsTo('App\Models\Backlog');
+        return $this->hasOne('App\Models\Backlog');
     }
 }
