@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Project;
 
 use App\Http\Controllers\Controller;
+use App\Models\Company;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
@@ -36,7 +37,8 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $project = Project::create($request->all());
+        return response(['succes' => true, 'project' => $project],200);
     }
 
     /**

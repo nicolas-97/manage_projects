@@ -29,4 +29,4 @@ Route::group(
 });
 
 Route::resource('company', 'Company\CompanyController')->only(['index','show']); //show need middleware
-Route::resource('project', 'Project\ProjectController')->only('show'); //middleware
+Route::resource('project', 'Project\ProjectController')->only(['show','store']); //middleware
