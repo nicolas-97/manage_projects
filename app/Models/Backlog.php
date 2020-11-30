@@ -20,4 +20,8 @@ class Backlog extends Model
     public function sprints(){
         return $this->hasMany('App\Models\Sprint');
     }
+
+    public function tasks(){
+        return $this->hasManyThrough('App\Models\Task','App\Models\Sprint');
+    }
 }
