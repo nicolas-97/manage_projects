@@ -32,3 +32,4 @@ Route::resource('company', 'Company\CompanyController')->only(['index','show']);
 Route::resource('project', 'Project\ProjectController')->only(['show','store']); //middleware
 Route::resource('backlog', 'Backlog\BacklogController')->only('show'); //middleware
 Route::resource('sprint', 'Sprint\SprintController')->except('index'); //middleware;
+Route::resource('task', 'Task\TaskController')->except('index'); //middleware
