@@ -27,3 +27,5 @@ Route::group(
                 Route::get('user', 'Auth\AuthController@user');
         });
 });
+
+Route::resource('company', 'Company\CompanyController')->only(['index','show']); //show need middleware
