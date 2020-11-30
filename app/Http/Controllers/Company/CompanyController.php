@@ -28,13 +28,11 @@ class CompanyController extends Controller
      */
     public function show(Company $company)
     {
-        return response()->json(
-            [
-                $company,
-                $company->projects,
-                $company->users,
-            ]
-            );
+        return [
+            'company' => $company,
+            'users' => $company->users,
+            'projects' => $company->projects
+        ];
     }
 
 
